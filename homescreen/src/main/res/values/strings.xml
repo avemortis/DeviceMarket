@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="select_category">Select Category</string>
+    <string name="view_all">view all</string>
+    <string name="search">Search</string>
+    <string name="hot_sales">Hot Sales</string>
+    <string name="best_seller">Best Seller</string>
+    <string name="see_more">see more</string>
+</resources>

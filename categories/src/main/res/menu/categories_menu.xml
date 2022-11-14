@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/phones"
+        android:icon="@drawable/ic_phones"
+        android:title="@string/phones"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/computers"
+        android:icon="@drawable/ic_computer"
+        android:title="@string/computers"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/health"
+        android:icon="@drawable/ic_health"
+        android:title="@string/health"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/books"
+        android:icon="@drawable/ic_books"
+        android:title="@string/books"
+        app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/tools"
+        android:icon="@drawable/ic_tools"
+        android:title="@string/tools"
+        app:showAsAction="ifRoom|withText"/>
+</menu>
