@@ -39,6 +39,7 @@ dependencies {
     def nav_version = "2.5.3"
 
     implementation project(":homescreen")
+    implementation project(":uikit")
 
     //Dagger 2
     def dagger_version = "2.44"

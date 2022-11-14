@@ -34,8 +34,8 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        binding.hotSalesViewpager.adapter = hotSalesAdapter
-        binding.bestSellersList.adapter = marketAdapter
+        binding.scrollContent.hotSalesViewpager.adapter = hotSalesAdapter
+        binding.scrollContent.bestSellersList.adapter = marketAdapter
         subscribe()
         prepareCategoriesAdapter()
         return binding.root

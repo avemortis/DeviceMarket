@@ -1,9 +1,11 @@
 package com.vtorushin.market.ui
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.vtorushin.market.R
 import com.vtorushin.market.data.MarketItem
 import com.vtorushin.market.databinding.HolderMarketItemBinding
 
@@ -20,8 +22,15 @@ class MarketAdapter(var items: List<MarketItem>) : RecyclerView.Adapter<MarketHo
             .centerCrop()
             .into(holder.picture)
         holder.title.text = items[position].title
-        holder.actualPrice.text = items[position].discountPrice.toString()
-        holder.irrelevantPrice.text = items[position].priceWithoutDiscount.toString()
+        holder.actualPrice.text = holder.itemView.context.getString(
+            R.string.with_dollar,
+            items[position].discountPrice.toString()
+        )
+        holder.irrelevantPrice.text = holder.itemView.context.getString(
+            R.string.with_dollar,
+            items[position].priceWithoutDiscount.toString()
+        )
+        holder.irrelevantPrice.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
     }
 
     override fun getItemCount() = items.size
