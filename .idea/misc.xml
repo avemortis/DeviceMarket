@@ -22,7 +22,11 @@
         <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/hotsales/src/main/res/drawable/circle_shape.xml" value="0.1875" />
         <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/hotsales/src/main/res/drawable/rounded_corners.xml" value="0.1" />
         <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/hotsales/src/main/res/layout/item_hot_sales.xml" value="0.33" />
-        <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/market/src/main/res/layout/holder_market_item.xml" value="0.360054347826087" />
+        <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/market/src/main/res/drawable/ic_like_checkable.xml" value="0.1785" />
+        <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/market/src/main/res/drawable/ic_like_clicked.xml" value="0.2825" />
+        <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/market/src/main/res/drawable/ic_like_unclicked.xml" value="0.2145" />
+        <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/market/src/main/res/drawable/like_checkable.xml" value="0.2145" />
+        <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/market/src/main/res/layout/holder_market_item.xml" value="0.671201814058957" />
         <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/uikit/src/main/res/drawable/grey_circle.xml" value="0.1" />
         <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/uikit/src/main/res/drawable/orange_circle.xml" value="0.2355" />
         <entry key="..\:/Users/adara/AndroidStudioProjects/DeviceMarket/uikit/src/main/res/drawable/white_circle.xml" value="0.2355" />

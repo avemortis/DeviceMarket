@@ -1,4 +1,4 @@
-package com.vtorushin.market.data
+package com.vtorushin.market.entities
 
 import com.google.gson.annotations.SerializedName
 

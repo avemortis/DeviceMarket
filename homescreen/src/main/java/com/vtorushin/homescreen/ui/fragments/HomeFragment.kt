@@ -8,12 +8,13 @@ import android.view.ViewGroup
 import android.widget.PopupMenu
 import androidx.lifecycle.lifecycleScope
 import com.vtorushin.categories.ui.recyclerview.CategoriesAdapter
-import com.vtorushin.categories.ui.recyclerview.CategoriesViewHolder
+import com.vtorushin.categories.usecases.SwitchActiveCategoryUseCase
+import com.vtorushin.core.models.Status
 import com.vtorushin.homescreen.databinding.FragmentHomeBinding
 import com.vtorushin.homescreen.di.component
 import com.vtorushin.hotsales.models.HotSalesItem
 import com.vtorushin.hotsales.ui.HotSalesPagerAdapter
-import com.vtorushin.market.data.MarketItem
+import com.vtorushin.market.entities.MarketItem
 import com.vtorushin.market.ui.MarketAdapter
 import kotlinx.coroutines.launch
 
@@ -43,13 +44,15 @@ class HomeFragment : Fragment() {
 
     private fun subscribe() {
         lifecycleScope.launch {
-            viewModel.homeStore.collect {
-                prepareHotSalesAdapter(it)
-            }
-        }
-        lifecycleScope.launch {
-            viewModel.market.collect {
-                prepareMarketAdapter(it)
+            viewModel.dataSource.collect {
+                when (it.status) {
+                    Status.LOADING -> {}
+                    Status.SUCCESSES -> {
+                        prepareHotSalesAdapter(it.data?.homeStore!!)
+                        prepareMarketAdapter(it.data?.bestSeller!!)
+                    }
+                    Status.ERROR -> {}
+                }
             }
         }
     }
@@ -72,11 +75,8 @@ class HomeFragment : Fragment() {
         )
         binding.categories.adapter = CategoriesAdapter(menu.menu) { holder, position ->
             holder.itemView.setOnClickListener {
-                if (position != viewModel.active) {
-                    holder.setCheck()
-                    (binding.categories.findViewHolderForAdapterPosition(viewModel.active) as CategoriesViewHolder).setUncheck()
-                    viewModel.active = position
-                }
+                SwitchActiveCategoryUseCase().invoke(binding.categories, viewModel.active, position)
+                viewModel.active = position
             }
             if (position == viewModel.active)
                 holder.setCheck()

@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.vtorushin.market.R
-import com.vtorushin.market.data.MarketItem
+import com.vtorushin.market.entities.MarketItem
 import com.vtorushin.market.databinding.HolderMarketItemBinding
 
 class MarketAdapter(var items: List<MarketItem>) : RecyclerView.Adapter<MarketHolderView>() {
@@ -41,4 +41,9 @@ class MarketHolderView(binding: HolderMarketItemBinding) : RecyclerView.ViewHold
     val title = binding.holderMarketItemTitle
     val actualPrice = binding.holderMarketItemActualPrice
     val irrelevantPrice = binding.holderMarketItemIrrelevantPrice
+     init {
+         binding.toggleBackground.setOnClickListener {
+             binding.likeButton.toggle()
+         }
+     }
 }

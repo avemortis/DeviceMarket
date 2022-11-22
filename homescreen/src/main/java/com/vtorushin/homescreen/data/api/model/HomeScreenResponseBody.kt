@@ -2,7 +2,7 @@ package com.vtorushin.homescreen.data.api.model
 
 import com.google.gson.annotations.SerializedName
 import com.vtorushin.hotsales.models.HotSalesItem
-import com.vtorushin.market.data.MarketItem
+import com.vtorushin.market.entities.MarketItem
 
 data class HomeScreenResponseBody(
     @SerializedName("home_store")
